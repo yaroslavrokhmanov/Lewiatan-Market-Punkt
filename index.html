@@ -10,6 +10,52 @@
 
 </head>
 <body>
+  <div class="container">
+
+    <section>  
+    <div id="app">
+      <h1 class="">Lewiatan</h1>
+
+      <div class="d-flex flex-row">
+        <div class="p-2 col-md-5">
+          img
+        </div>
+      </div>
+
+      <div class="d-flex flex-row">
+        <div class="p-2 col-md-5">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vel blanditiis dolorum nemo iusto repellat voluptatibus consectetur voluptate illo sint, quas laborum amet veritatis est. Doloribus quod rerum tenetur explicabo?</p>
+        </div>
+      </div>
+
+       <div class="s-flex flex-row">
+      <div class="col-md-3">
+     <h2>Ilość: {{ counter }}</h2>
+      <button class="btn btn-primary m-3" v-on:click="mycounter(1)">Więcej</button>
+      <button class="btn btn-primary" v-on:click="mycounter2(1)">Mniej</button>
+  </div>
+    </div>
+  
+  </div>
+  </section>
+  </div>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+      counter: 0,
+        },
+        methods:{ 
+        mycounter: function(){
+          this.counter+=1
+        },
+        mycounter2: function(){
+          this.counter-=1
+        }
+        }
+      })
+</script
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
