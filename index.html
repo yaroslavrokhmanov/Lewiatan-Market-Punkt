@@ -14,11 +14,10 @@
 
     <section>  
     <div id="app">
-      <h1 class="">Lewiatan</h1>
-
+      <h1 class="v-center">Lewiatan</h1>
       <div class="d-flex flex-row">
         <div class="p-2 col-md-5">
-          img
+          <img v-bind:src="src"/>
         </div>
       </div>
 
@@ -29,21 +28,25 @@
       </div>
 
        <div class="s-flex flex-row">
+         
       <div class="col-md-3">
      <h2>Ilość: {{ counter }}</h2>
-      <button class="btn btn-primary m-3" v-on:click="mycounter(1)">Więcej</button>
-      <button class="btn btn-primary" v-on:click="mycounter2(1)">Mniej</button>
+      <button class="btn btn-primary m-3" @click="mycounter(1)">Więcej</button>
+      <button class="btn btn-primary" @click="mycounter2(1)">Mniej</button>
   </div>
     </div>
   
   </div>
   </section>
+
   </div>
 
     <script>
       new Vue({
         el: '#app',
         data: {
+
+          src: "https://polskikoszyk.pl/media/catalog/product/cache/1/image/500x/040ec09b1e35df139433887a97daa66f/74458/coca-cola-1-5-l-napoje-gazowane-napoje-kawa-i-herbata_0.jpg",
       counter: 0,
         },
         methods:{ 
@@ -52,10 +55,16 @@
         },
         mycounter2: function(){
           this.counter-=1
+        },
+        products: {
+          productName: "Colla",
+          src: 'https://polskikoszyk.pl/media/catalog/product/cache/1/image/500x/040ec09b1e35df139433887a97daa66f/74458/coca-cola-1-5-l-napoje-gazowane-napoje-kawa-i-herbata_0.jpg',
+          text: ""
         }
         }
+       
       })
-</script
+</script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
